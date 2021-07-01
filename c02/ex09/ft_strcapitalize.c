@@ -16,7 +16,8 @@ char	*ft_strcapitalize(char *str)
 		{
 			if ((!(is_alpha(str[counter - 1])) || counter == 0))
 			{
-				if (str[counter] >= 'a' && str[counter] <= 'z')
+				if ((str[counter] >= 'a' && str[counter] <= 'z')
+					&& !(str[counter - 1] >= '0' && str[counter - 1] <= '9'))
 					str[counter] = str[counter] - 32;
 			}
 			else
@@ -31,9 +32,9 @@ char	*ft_strcapitalize(char *str)
 }
 
 #include <stdio.h>
-int	main(void)
+int main()
 {
-	char	a[] = "salut, comment tu vas ? 42mots qUARante-deux; cInQuAnte+et+un";
+	char a[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 
 	ft_strcapitalize(a);
 	printf("%s", a);

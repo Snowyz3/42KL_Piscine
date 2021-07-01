@@ -1,30 +1,27 @@
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int counter;
-	
+	unsigned int	counter;
+
 	counter = 0;
-	while (*src && counter < n)
+	while (src[counter] && counter < n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[counter] = src[counter];
 		counter++;
 	}
 	while (counter < n)
 	{
-		*dest = '\0';
-		dest++;
+		dest[counter] = '\0';
 		counter++;
 	}
 	return (dest);
 }
 
 #include <stdio.h>
-int	main(void)
+int main()
 {
-	char a[] = "abcdef";
-	char *b;
+	char a[] = "123456";
+	char b[6];
 
 	ft_strncpy(b, a, 4);
-	printf("%s\n%s", a, b);
+	printf("%s", b);
 }

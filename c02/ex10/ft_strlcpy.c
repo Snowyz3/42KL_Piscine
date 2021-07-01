@@ -1,18 +1,16 @@
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	counter;
+	unsigned int	counter;
 
 	counter = 0;
-	while (*src && counter < size)
+	while (src[counter] && counter < size)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[counter] = src[counter];
 		counter++;
 	}
 	if (counter == size)
-		dest--;
-	*dest = '\0';
+		counter--;
+	dest[counter] = '\0';
 	return (counter);
 }
 
@@ -20,7 +18,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 int	main(void)
 {
 	char	a[] = "ab";
-	char	*b;
+	char	b[4];
 
 	ft_strlcpy(b, a, 4);
 	printf("%s\n%s", a, b);
