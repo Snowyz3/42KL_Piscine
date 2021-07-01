@@ -1,0 +1,5 @@
+Credentials cache: API:805BF87B-ADDB-4685-9984-AD94B0566C40
+        Principal: bbong@42KL.EDU.MY
+
+  Issued                Expires               Principal
+Jun 21 11:02:47 2021  Jun 21 21:02:41 2021  krbtgt/42KL.EDU.MY@42KL.EDU.MY
